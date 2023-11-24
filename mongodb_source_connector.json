@@ -1,0 +1,13 @@
+{
+  "name": "mongodb-source-connector",
+  "config": {
+      "connector.class" : "io.debezium.connector.mongodb.MongoDbConnector",
+      "tasks.max" : "1",
+      "mongodb.connection.string" : "mongodb://mongodb1:27011,mongodb2:27012,mongodb3:27013/?replicaSet=rs0",
+      "mongodb.user" : "debezium",
+      "mongodb.password" : "dbz",
+      "database.include.list" : "test_db",
+      "topic.prefix" : "test_db",
+      "schema.history.internal.kafka.bootstrap.servers" : "kafka:29092"
+  }
+}
